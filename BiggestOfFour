@@ -1,0 +1,15 @@
+import java.util.*;
+
+public class BiggestOfFour {
+
+	public static void main(String[] args) {
+		int a[]= {2,4,1,5};
+		int n=4;
+		Arrays.sort(a);
+		System.out.println(a[n-1]);
+		
+	
+
+	}
+
+}
