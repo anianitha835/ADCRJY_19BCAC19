@@ -1,0 +1,32 @@
+import java.util.*;
+public class Harshad_num {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();     
+		int temp=n;
+		int rem,sum=0;
+		while(n>0) {
+			rem=n%10;     
+			sum+=rem;   
+			n/=10;
+		}
+		
+		if(temp%sum==0){
+			System.out.println(temp +" Harshad number");
+		}
+		else {
+			System.out.println(temp+" not a Harshad number");
+		}
+	}
+
+}
+
+
+
+output:
+156
+156 is Harshad number
+
+22
+22 is not Harshad number
