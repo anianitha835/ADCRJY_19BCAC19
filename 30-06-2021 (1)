@@ -1,0 +1,39 @@
+import java.util.*;
+public class replaceNums {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+		int x=sc.nextInt();
+		int y=sc.nextInt();
+		int result=0,mul=1;
+		while(n/10>0) {
+			int rem=n%10;      
+			if(rem==x) {
+				result=result+y*mul;
+			}
+			else {
+				result=result+rem*mul;
+			}
+			  mul*=10;
+			  n/=10;
+		 }
+			
+		if(n==x) {
+			result=result+n*mul;
+			}
+		else {
+			result=result+n*mul;
+			}
+		 System.out.println(result);
+			
+		}
+		
+	}
+
+
+output:
+16743
+7
+9
+16943
