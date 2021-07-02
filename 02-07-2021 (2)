@@ -1,0 +1,23 @@
+import java.util.*;
+public class IncOrDec {
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int N=sc.nextInt();
+		if(N%4==0){
+			System.out.println(++N);
+				}
+		else{
+			System.out.println(--N);
+			    }
+		   }
+		}
+
+
+
+
+output:
+555
+554
+
+32
+33
