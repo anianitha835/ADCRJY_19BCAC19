@@ -1,0 +1,45 @@
+import java.util.*;
+public class Patternn {
+	public static char alphabet[] = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'};
+	
+	public static char defLettre(int j) {
+        char result = alphabet[j];
+        return result;
+     }
+ 
+    public static void complex(int n) {
+ 
+        for (int l = 1; l <= 2 * n - 1; l++) {
+            System.out.println();
+            for (int c = 1; c <= 2 * n - 1; c++) {
+                for (int j = 1; j <= 2 * n - 1; j++) {
+                    if (((l == j) || (c == j)) || (l == 2 * n - j) || (c == 2 * n - j)) {
+                        System.out.print(defLettre(j - 1));
+                        break;
+                    }
+ 
+                }
+ 
+            }
+ 
+        }
+    }
+  public static void main(String[] args) {
+    	 
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        Patternn.complex(n);
+    }
+}
+
+
+output:
+4
+
+AAAAAAA
+ABBBBBA
+ABCCCBA
+ABCDCBA
+ABCCCBA
+ABBBBBA
+AAAAAAA
