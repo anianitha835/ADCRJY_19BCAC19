@@ -1,5 +1,5 @@
 import java.util.*;
-class Strprogram
+class SymbolsDigits
 {
 public static void main(String args[])
 {
