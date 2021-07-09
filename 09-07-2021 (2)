@@ -1,0 +1,19 @@
+import java.util.*;
+class SplitSpaces {
+
+	public static void main(String[] args) {
+		 Scanner sc = new Scanner(System.in);
+	      StringBuffer sb = new StringBuffer();
+	      String str = new String();
+	      while (sc.hasNextLine()) {
+	         str = sc.nextLine();
+	         sb.append(str);
+	         break;
+	      }
+	      String source = sb.toString();
+	      String result[] = source.split(" ");
+	      for(int i = 0; i < result.length; i++) {
+	         System.out.print(result[i]);
+	      }
+	   }
+	}
