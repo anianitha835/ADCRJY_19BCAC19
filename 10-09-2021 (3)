@@ -1,0 +1,24 @@
+import java.util.*;
+public class DecimalConversion {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.print("enter your choice:");
+		int ch=sc.nextInt();
+		System.out.println("enter decimal value:");
+		int dec=sc.nextInt();
+		switch(ch) {
+		case 1:String b=Integer.toBinaryString(dec);
+		       System.out.println("Binaryvalue:"+b);
+		       break;
+		case 2:String o=Integer.toOctalString(dec);
+		       System.out.println("Octalvalue:"+o);
+		       break;
+		case 3:String h=Integer.toHexString(dec);
+		       System.out.println("Hexavalue:"+h);
+		       break;
+		}
+		
+	}
+
+}
