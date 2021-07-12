@@ -1,0 +1,23 @@
+import java.util.*;
+public class FirstLetterCap {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.print("enter a string:");
+		String str=sc.nextLine();
+		String words[]=str.split(" ");
+		String CapWord=" ";
+		for(String w:words) {
+			String first=w.substring(0,1);
+			String last=w.substring(1);
+			CapWord+=first.toUpperCase() +last +" ";
+			
+		}
+		
+		System.out.print(CapWord.trim());
+		
+		
+
+	}
+
+}
