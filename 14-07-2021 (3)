@@ -1,0 +1,27 @@
+import java.util.*;
+public class TwinPrimeCount {
+	 public static void main(String[] args) {
+	        Scanner in = new Scanner(System.in);
+	        int n = in.nextInt();
+	        int m = in.nextInt();
+	        int count = 0;
+	        for(int i=n; i<=m-2; i++) {
+	            if(isPrime(i, i+2)) {
+	                count++;
+	            }
+	        }
+	        System.out.println(count);
+	    }
+	    static boolean isPrime(int n, int m) {
+	        if(n == 1) {
+	            return false;
+	        }
+	        for(int i=2; i*i<=n || i*i<=m; i++) {
+	            if(n%i == 0 || m%i == 0) {
+	                return false;
+	            }
+	        }
+	        return true;
+	    }
+	}
+	    
