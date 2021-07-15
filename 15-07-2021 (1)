@@ -1,0 +1,25 @@
+import java.util.*;
+public class ArrayListCopy {
+
+	public static void main(String[] args) {
+		List<Integer> a1=new ArrayList<Integer>();
+		List<Integer> a2=new ArrayList<Integer>();
+		List<Integer> b=new ArrayList<Integer>();
+		a1.add(10);
+		a1.add(23);
+		a1.add(44);
+		a1.add(7);
+		
+		a2.add(1);
+		a2.add(324);
+		a2.add(76);
+		a2.add(100);
+		
+		b.addAll(a1);
+		b.addAll(a2);
+		Collections.sort(b);
+		System.out.println(b);
+		
+	}
+
+}
