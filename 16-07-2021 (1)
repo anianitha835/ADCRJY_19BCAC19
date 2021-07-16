@@ -1,0 +1,27 @@
+import java.util.*;
+public class ReadNElements{
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.print("enter n value");
+		int n=sc.nextInt();
+		ArrayList<Integer> A=new ArrayList<Integer>();
+		while(n-->0) {
+			A.add(sc.nextInt());
+		}
+		System.out.print("enter a value from ArrayList");
+		int a=sc.nextInt();
+		System.out.print("enter a value to be replaced");
+		int b=sc.nextInt();
+
+		if(A.contains(a)) {
+			int ind=A.indexOf(a);
+			A.set(ind,b);
+			System.out.print(A);
+		}
+		else {
+			System.out.print("false");
+		}
+	}
+
+}
