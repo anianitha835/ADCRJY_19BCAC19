@@ -1,0 +1,23 @@
+import java.util.*;
+public class DeleteFromArrayList {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.print("enter n value");
+		int n=sc.nextInt();
+		ArrayList<Integer> A=new ArrayList<Integer>();
+		while(n-->0) {
+			A.add(sc.nextInt());
+		}
+		System.out.print("enter a value to search");
+		int a=sc.nextInt();
+		if(A.contains(a)) {
+			A.remove(Integer.valueOf(a));
+			System.out.print(A);
+		}
+		else {
+			System.out.print("element not found");
+		}
+	}
+
+}
