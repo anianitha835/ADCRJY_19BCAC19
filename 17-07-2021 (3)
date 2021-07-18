@@ -1,0 +1,25 @@
+class MyHashSet {
+    HashSet<Integer> myhashset;
+
+    /** Initialize your data structure here. */
+    public MyHashSet() {
+        myhashset=new HashSet<Integer>();
+        
+    }
+    
+    public void add(int key) {
+        myhashset.add(key);
+        
+    }
+    
+    public void remove(int key) {
+        myhashset.remove(key);
+        
+    }
+    
+    /** Returns true if this set contains the specified element */
+    public boolean contains(int key) {
+        return myhashset.contains(key);
+        
+    }
+}
