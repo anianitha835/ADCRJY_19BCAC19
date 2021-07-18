@@ -1,0 +1,35 @@
+import java.util.*;
+public class Vector1 {
+
+	public static void main(String[] args) {
+		Vector v=new Vector();
+		v.add(101);
+		v.add("Rama");
+		v.add(6.58);
+		v.add(102);
+		v.add("Gita");
+		v.add(8.98);
+		System.out.println(v);
+		v.remove("Gita");
+		
+		System.out.println(v+" ");
+		
+		if(v.contains(6.58)) {
+			int ind=v.indexOf(6.58);
+			v.set(ind,9.17);
+		}
+		System.out.println(v +" ");
+		if(v.contains("sita")) {
+			System.out.print(v);
+		}
+		else {
+			System.out.println("false");
+		}
+		
+		
+		
+		
+
+	}
+
+}
