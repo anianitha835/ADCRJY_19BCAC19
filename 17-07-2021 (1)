@@ -1,0 +1,43 @@
+import java.util.*;
+public class LinkedListMenu {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		LinkedList<Integer> A=new LinkedList<Integer>();
+	    int ch,n;
+	    do {
+	    	System.out.println("1.BeginInsert\n2.EndInsert\n3. Position Insert\n4. Begin Delete\n5. End Delete\n6. Position Delete\n7. Display\n8. Exit");
+	    	System.out.print("enter your choice");
+	    	ch=sc.nextInt();
+	        switch(ch) {
+	        case 1: System.out.print("enter n value");
+                    n=sc.nextInt();
+	                A.addFirst(n);
+	                break;
+	        case 2:System.out.print("enter n value");
+	               n=sc.nextInt();
+	               A.addLast(n);
+	               break;
+	        case 3:System.out.print("enter n value");
+                   n=sc.nextInt();
+                   System.out.print("enter position:");
+                   int p=sc.nextInt();
+	               A.set(p,n);
+	               break;
+	        case 4:A.removeFirst();
+                   break;
+	        case 5:A.removeLast();
+                   break;
+	        case 6:System.out.print("enter n value");
+                   n=sc.nextInt();
+                   A.remove(Integer.valueOf(n));
+                   break;
+	        case 7:System.out.println(A);
+                   break;
+	        case 8:break;
+	        default:System.out.print("invalid choice");
+	    }
+	}while(ch<9);
+
+}
+}
