@@ -1,0 +1,17 @@
+import java.util.*;
+public class HashMap1 {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+		HashMap<Integer,String> m=new HashMap<Integer,String>();
+		TreeMap<Integer,String> t=new TreeMap<Integer,String>(m);
+		while(n-->0) {
+			m.put(sc.nextInt(),sc.next());
+		}
+		t.putAll(m);
+        System.out.print(t);
+		
+		}
+
+}
