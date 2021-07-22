@@ -1,0 +1,31 @@
+import java.util.*;
+public class HashTable {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		Hashtable<Integer,Integer> ht=new Hashtable<Integer,Integer>();
+		ht.put(101,50000);
+		ht.put(102,45000);
+		ht.put(103,35000);
+		ht.put(104,40000);
+		ht.put(105,45000);
+		System.out.println(ht);
+		System.out.print("enter key value:");
+		int key=sc.nextInt();
+		try {
+		
+		if(ht.contains(ht.get(key))){
+			ht.replace(key,ht.get(key)+5000);
+			System.out.print(ht);
+		}
+		else {
+			System.out.print("value not found");
+		}
+		}
+		catch(Exception e) {
+			System.out.print("value not found");
+			
+		}
+		
+	}
+}
