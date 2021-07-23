@@ -1,0 +1,34 @@
+class Result {
+    
+    public static String isBalanced(String s) {
+        Stack<Character> st=new Stack<Character>();
+
+        char[] ch=s.toCharArray();
+        char t;
+       for(char i:ch)
+{
+    t=st.empty()?'*':st.peek();
+    if(t=='(' && i==')')
+    st.pop();
+    else if(t=='{' && i=='}')
+    st.pop();
+    else if(t=='[' && i==']')
+    st.pop();
+    else
+    st.push(i);
+}
+return (st.empty()?"YES":"NO");
+}
+}
+ public class Solution {
+    public static void main(String[] args) throws IOException {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        
+        while(n-->0){
+            String s=sc.next();
+            System.out.println(Result.isBalanced(s));
+        }
+        
+    }
+}
