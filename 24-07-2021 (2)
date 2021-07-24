@@ -1,0 +1,23 @@
+class Solution {
+    public void int[] intersection(int[] nums1, int[] nums2) {
+         HashSet<Integer> set1 = new HashSet<>();
+        HashSet<Integer> set2 = new HashSet<>();
+        for(int n: nums1)
+            set1.add(n);
+        for(int n: nums2)
+            set2.add(n);
+        set1.retainAll(set2);
+        int[] res = new int[set1.size()];
+        int i=0;
+        for(int n: set1)
+            res[i++] = n;
+        return res;
+        
+    }
+    public static void main(String[] ar){
+    int[] nums1={12345};
+    int[] nums2={87523};
+    System.out.print(intersection(nums1,nums2);
+    
+}
+}
