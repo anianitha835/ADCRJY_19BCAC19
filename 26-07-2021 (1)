@@ -23,7 +23,9 @@ public boolean isPrime(int num, int x) {
     }      
 
 public static void main(String args[]){
+    Scanner sc=new Scanner(System.in);
+    int n=sc.nextInt();
     Solution s=new Solution();
-    s.countPrimes(int n);
+    s.countPrimes(n);
     }
   }
