@@ -1,0 +1,35 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+    public static int primenum(int start, int end){ //1 10
+        int sum=0;
+        int isprime[]=new int[end+1];
+        for(int i=0;i<=end;i++){
+            isprime[i]=1;
+        if(start==1)
+            isprime[1]=0;
+    }
+    for(int p=2;p*p<=end;p++){
+        if(isprime[p]==1)
+            for(int i=p*p;i<=end;i+=p)
+                isprime[i]=0;
+    }
+    for(int j=start+1;j<end;j++){
+        if(isprime[j]==1)
+            sum++;
+    }
+        return sum;
+    }
+    public static void main(String[] args) {
+       Scanner sc=new Scanner(System.in);
+        int Q=sc.nextInt();
+        while(Q-->0){
+            int start=sc.nextInt();
+            int end=sc.nextInt();
+            long p=primenum(start,end);
+            System.out.println(p);
+        }
+        
+    }
+}
