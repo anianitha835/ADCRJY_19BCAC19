@@ -1,0 +1,32 @@
+import java.util.*;
+import java.io.*;
+class Main {
+    public static void main(String args[]) throws Exception{
+    BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+        int a=Integer.parseInt(br.readLine());
+        int b=Integer.parseInt(br.readLine());
+       int num=great(a,b);
+       int sum=0;
+       int lim=(int)Math.sqrt(num);
+       while(num%2==0){
+           sum=sum+2;
+           num=num/2;}
+           
+       
+       for(int i=3;i<=lim;i=i+2){
+           if(num%i==0){
+               sum=sum+i;
+               num=num/i;
+           }
+       }
+       if(num>2)
+           sum=sum+num;
+           System.out.println(sum);
+       }
+       public static int great(int x,int y){
+           if(x==0)
+           return y;
+           else return great(y%x,x);
+       }
+    }
+    
