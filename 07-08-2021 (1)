@@ -1,0 +1,26 @@
+class Geeks {
+   
+    static void bitWiseOperation(int a, int b, int c) {
+        int d,e,f,g;
+        d=a^a;
+        System.out.println(d);
+        e=c^b;
+        System.out.println(d);
+        f=a&b;
+        System.out.println(f);
+        g=c|(a^a);
+        System.out.println(g);
+        e=~e;
+        System.out.println(e);
+       
+    }
+public static void main(String args[])
+{
+Scanner sc=new Scanner(System.in);
+int a=sc.nextInt();
+int b=sc.nextInt();
+int c=sc.nextInt();
+Geeks obj=new Geeks();
+obj.bitWiseOperation(a,b,c);
+}
+}
