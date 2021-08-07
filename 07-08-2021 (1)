@@ -1,3 +1,4 @@
+import java.util.*;
 class Geeks {
    
     static void bitWiseOperation(int a, int b, int c) {
