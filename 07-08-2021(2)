@@ -1,0 +1,32 @@
+import java.util.*;
+class Solution {
+    public int singleNumber(int[] nums) {
+        Arrays.sort(nums);
+        int count=1;
+        int cur=nums[0];
+        for(int i=1;i<nums.length;i++){
+            if(cur!=nums[i] && count==1){
+                return cur;
+            }            
+            else if(cur!=nums[i])
+            {
+                cur=nums[i];
+                count=1;
+            }
+            else 
+                count++;
+        }
+        return cur;
+    }
+public static void main(String args[])
+{
+Scanner sc=new Scanner(System.in);
+int nums[]=new int[6];
+for(int i=0;i<n;i++)
+{
+nums[i]=sc.nextInt();
+}
+Solution obj=new Solution();
+System.out.print(obj.singleNumber(nums);
+}
+}
