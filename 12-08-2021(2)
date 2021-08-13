@@ -1,0 +1,20 @@
+import java.util.*;
+public class ArrayReverseUsingRecursion {
+	public static void array(int a[],int i,int n) {
+		if(i==n)
+			return;
+		else
+			System.out.print(a[i]+" ");
+		    array(a,i+1,n);
+			
+	}
+
+	public static void main(String[] args) {
+		int a[]= {100,2,66,44,23,45,86,99,10};
+		int n,i;
+		n=a.length;
+		i=0;
+		array(a,i,n);
+	}
+
+}
