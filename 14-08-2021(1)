@@ -1,0 +1,25 @@
+import java.util.*;
+public class SubstringUsingRecursion {
+	public static void sub(String input,String output) {
+		if(input.length()==0) {
+			System.out.print(output);
+		    return;
+		}
+		 for(int i=0;i<input.length();i++) {
+				char ch=input.charAt(i);
+				String left=input.substring(0,i);
+				String right=input.substring(i+1);
+				String input1=left+right;
+				String output1=output+ch;
+				sub(input1,output1);
+			}
+		    	
+	}
+	public static void main(String args[]) {
+		Scanner sc=new Scanner(System.in);
+				String s=sc.next();
+		        String s1=" ";
+		        sub(s,s1);
+	}
+
+}
