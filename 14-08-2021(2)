@@ -1,0 +1,31 @@
+import java.util.*;
+public class IndirectRecursion {
+	static int N=50;
+	static int n=5;
+	public static void fun1() {
+		if(n<=N) {
+			System.out.printf("%d ", n);
+             n=n+5;
+             fun2();
+		}
+		else {
+			return;
+		}
+	}
+	public static void fun2() {
+		if(n<=N) {
+			System.out.printf("%d ", n);
+             n=n+5;
+             fun1();
+	}
+	else {
+		return;
+	}
+	}
+	
+
+	public static void main(String[] args) {
+		fun1();
+	}
+
+}
